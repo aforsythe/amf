@@ -195,25 +195,36 @@
 		</xs:choice>
 	</xs:complexType>
 	
-	<xs:complexType name="cdlType">
-		<xs:sequence>
-			<xs:element name="lmtWorkingSpace" type="amf:lmtWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="SOPNode" type="cdl:SOPNodeType" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="SatNode" type="cdl:SatNodeType" minOccurs="1" maxOccurs="1"/>
-		</xs:sequence>
-		<xs:attribute name="lmtStackPosition" type="amf:singleDigit" use="required"/>
-		<xs:attribute name="applied" type="xs:boolean" use="required"/> 
-	</xs:complexType>
-
-	<xs:complexType name="lookFileType">
+	<xs:complexType name="lmtType">
 		<xs:complexContent>
 			<xs:extension base="amf:transformType">
 				<xs:sequence>
-					<xs:element name="transformId" type="amf:tnLmt" minOccurs="1" maxOccurs="1"/>
 					<xs:element name="lmtWorkingSpace" type="amf:lmtWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 				<xs:attribute name="lmtStackPosition" type="amf:singleDigit" use="required"/>
 				<xs:attribute name="applied" type="xs:boolean" use="required"/> 
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	
+	<xs:complexType name="cdlType">
+		<xs:complexContent>
+			<xs:extension base="amf:lmtType">
+				<xs:sequence>
+					<xs:element name="SOPNode" type="cdl:SOPNodeType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="SatNode" type="cdl:SatNodeType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="lookFileType">
+		<xs:complexContent>
+			<xs:extension base="amf:lmtType">
+				<xs:sequence>
+					<xs:element name="transformId" type="amf:tnLmt" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>

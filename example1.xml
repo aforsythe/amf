@@ -54,7 +54,6 @@
             <lookFile lmtStackPosition="1" applied="false">
                 <description>Acme DI Show Look</description>
                 <hash algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</hash>
-                <transformId>LMT.AcmeDI.a1.v5</transformId>
                 <lmtWorkingSpace>
                     <acesToLmtWorkingSpace>
                         <description>Use ACEScc as the working space for this LMT</description>
@@ -66,6 +65,7 @@
                         <transformId>ACEScsc.ACEScc_to_ACES.a1.0.3</transformId>
                     </lmtWorkingSpaceToAces>
                 </lmtWorkingSpace>
+                <transformId>LMT.AcmeDI.a1.v5</transformId>
             </lookFile>
         </lookTransforms>
         <outputTransform>
@@ -124,7 +124,6 @@
             <lookFile lmtStackPosition="1" applied="false">
                 <description>Acme DI Show Look</description>
                 <hash algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</hash>
-                <transformId>LMT.AcmeDI.a1.v5</transformId>
                 <lmtWorkingSpace>
                     <acesToLmtWorkingSpace>
                         <description>Use ACEScc as the working space for this LMT</description>
@@ -136,6 +135,7 @@
                         <transformId>ACEScsc.ACEScc_to_ACES.a1.0.3</transformId>
                     </lmtWorkingSpaceToAces>
                 </lmtWorkingSpace>
+                <transformId>LMT.AcmeDI.a1.v5</transformId>
             </lookFile>
         </lookTransforms>
         <outputTransform>
