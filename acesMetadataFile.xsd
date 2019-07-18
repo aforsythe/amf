@@ -211,12 +211,22 @@
 		</xs:sequence>
 	</xs:complexType>
 	
-	<xs:complexType name="pipelineInfoType">
+	<xs:complexType name="infoType">
 		<xs:sequence>
-			<xs:element name="piplineDateTime" type="amf:dateTime" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="acesVersion" type="amf:acesVersionType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dateTime" type="amf:dateTime" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="uuid" type="amf:uuidType" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="pipelineInfoType">
+		<xs:complexContent>
+			<xs:extension base="amf:infoType">
+				<xs:sequence>
+					<xs:element name="acesVersion" type="amf:acesVersionType" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 	
 	<xs:complexType name="acesPipelineType">
@@ -228,19 +238,11 @@
 		</xs:sequence>
 	</xs:complexType>
 	
-	<xs:complexType name="fileInfoType">
-		<xs:sequence>
-			<xs:element name="uuid" type="amf:uuidType" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="fileDateTime" type="amf:dateTime" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
-		</xs:sequence>
-	</xs:complexType>
-	
 	<!-- Define ACES Metadata File element -->
 	<xs:element name="acesMetadataFile">
 		<xs:complexType>
 			<xs:sequence>
-			    <xs:element name="fileInfo" type="amf:fileInfoType" minOccurs="1" maxOccurs="1"/>
+			    <xs:element name="fileInfo" type="amf:infoType" minOccurs="1" maxOccurs="1"/>
 				<xs:element name="acesPipeline" type="amf:acesPipelineType" minOccurs="1" maxOccurs="1"/>
 				<xs:element name="archivedAcesPipeline" type="amf:acesPipelineType" minOccurs="0" maxOccurs="10"/>
 			</xs:sequence>
