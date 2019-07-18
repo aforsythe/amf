@@ -137,16 +137,9 @@
             </lookFile>
         </lookTransforms>
         <outputTransform>
-            <rrt>
-                <transformId>RRT.a1.0.3</transformId>
-            <description>ACES v1.0.3 RRT</description>
-                <hash algorithm="sha256">c81af4fb4a22ee0353308e4582708951df4682bf73f838c24bf44e585fc3bb61</hash>
-            </rrt>
-            <odt>
-                <transformId>ODT.Academy.P3D60_48nits.a1.0.3</transformId>
-                <description>P3D60 ODT</description>
-                <hash algorithm="sha256">efd279a82c2d52ee8c49dc0793499dc86bb1a4a3fa0dfb420d59c2814c55aea6</hash>
-            </odt>
+            <description>Some HDR Output Transform</description>
+            <hash algorithm="sha256">9ffcd28772e244f9a3c6e9893f499f2b4f2f3313d292db51aeea4fd3f65f00d9</hash>
+            <transformId>RRTODT.Acme.HDRODT.a1.v3</transformId>
         </outputTransform>
     </archivedAcesPipeline>
     </acesMetadataFile>
