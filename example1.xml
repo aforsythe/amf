@@ -32,6 +32,7 @@
         </inputTransform>
         <lookTransforms>
             <asc-cdl lmtStackPosition="0" applied="true">
+                <description>Technical Grade</description>
                 <lmtWorkingSpace>
                     <acesToLmtWorkingSpace>
                         <transformId>ACEScsc.ACES_to_ACEScct.a1.0.3</transformId>
@@ -41,13 +42,11 @@
                     </lmtWorkingSpaceToAces>
                 </lmtWorkingSpace>
                 <SOPNode>
-                    <cdl:Description>Technical Grade</cdl:Description>
                     <cdl:Slope>2.0 2.0 2.0</cdl:Slope>
                     <cdl:Offset>0.1 0.1 0.1</cdl:Offset>
                     <cdl:Power>1 1 1</cdl:Power>
                 </SOPNode>
                 <SatNode>
-                    <cdl:Description>Technical Grade</cdl:Description>
                     <cdl:Saturation>1</cdl:Saturation>
                 </SatNode>
             </asc-cdl>
@@ -102,6 +101,7 @@
         </inputTransform>
         <lookTransforms>
             <asc-cdl lmtStackPosition="0" applied="false">
+                <description>Technical Grade</description>
                 <lmtWorkingSpace>
                     <acesToLmtWorkingSpace>
                         <transformId>ACEScsc.ACES_to_ACEScct.a1.0.3</transformId>
@@ -111,13 +111,11 @@
                     </lmtWorkingSpaceToAces>
                 </lmtWorkingSpace>
                 <SOPNode>
-                    <cdl:Description>Technical Grade</cdl:Description>
                     <cdl:Slope>1.5 1.5 1.5</cdl:Slope>
                     <cdl:Offset>0.1 0.1 0.1</cdl:Offset>
                     <cdl:Power>1 1 1</cdl:Power>
                 </SOPNode>
                 <SatNode>
-                    <cdl:Description>Technical Grade</cdl:Description>
                     <cdl:Saturation>1</cdl:Saturation>
                 </SatNode>
             </asc-cdl>
