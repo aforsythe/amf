@@ -257,7 +257,12 @@
 		<xs:sequence>
 			<xs:element name="pipelineInfo" type="amf:pipelineInfoType" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="inputTransform" type="amf:idtType" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="lookTransforms" type="amf:lookTransformsType" minOccurs="0" maxOccurs="1" />
+			<xs:element name="lookTransforms" type="amf:lookTransformsType" minOccurs="0" maxOccurs="1">
+				<xs:unique name="uniqueLmtStackPosition">
+					<xs:selector xpath="amf:lookFile | amf:asc-cdl" />
+					<xs:field xpath="@lmtStackPosition" />
+				</xs:unique>
+			</xs:element>
 			<xs:element name="outputTransform" type="amf:outputTransformType" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
