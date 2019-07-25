@@ -21,6 +21,16 @@
 			<xs:element name="modificationDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
+	
+	<xs:simpleType name="nonNegIntList">
+		<xs:list itemType="xs:nonNegativeInteger"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="fourNonNegIntList">
+		<xs:restriction base="amf:nonNegIntList">
+			<xs:length value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
 
 	<!-- Define transform name types -->
 	<xs:simpleType name="tnLmt">
@@ -242,12 +252,20 @@
 			<xs:element name="uuid" type="amf:uuidType" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
+	
+	<xs:complexType name="framingInfoType">
+		<xs:sequence>
+			<xs:element name="inputFrame" type="amf:fourNonNegIntList"  minOccurs="1" maxOccurs="1"/>
+			<xs:element name="outputFrame" type="amf:fourNonNegIntList"  minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
 
 	<xs:complexType name="pipelineInfoType">
 		<xs:complexContent>
 			<xs:extension base="amf:infoType">
 				<xs:sequence>
 					<xs:element name="acesVersion" type="amf:acesVersionType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="framing" type="amf:framingInfoType" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>

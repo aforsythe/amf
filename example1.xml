@@ -24,6 +24,10 @@
                 <acesMinorVersion>0</acesMinorVersion>
                 <acesPatchVersion>3</acesPatchVersion>
             </acesVersion>
+            <framing>
+                <inputFrame>0 397 7168 3383</inputFrame>
+                <outputFrame>0 4096 0 1716</outputFrame>
+            </framing>
         </pipelineInfo>
         <inputTransform applied="true">
             <description>IDT from Acme Camera Company</description>
