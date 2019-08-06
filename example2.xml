@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <acesMetadataFile xmlns="urn:acesMetadata:acesMetadataFile:v2.0"
- xmlns:cdl="urn:ASC:CDL:v1.01"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="urn:acesMetadata:acesMetadataFile:v2.0 file:acesMetadataFile.xsd" version="2.0">
+    xmlns:cdl="urn:ASC:CDL:v1.01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:acesMetadata:acesMetadataFile:v2.0 file:acesMetadataFile.xsd" version="2.0">
     <fileInfo>
         <description>Oscar Winning Movie</description>
         <dateTime>
@@ -12,8 +12,8 @@
         <uuid>afe122be-59d3-4360-ad69-33c10108fa7a</uuid>
     </fileInfo>
     <clipId>
-        <clipName>A001C012</clipName>
-        <sequence idx="#" min="1" max="240">A001_C012_AE0306_###.exr</sequence>
+        <clipName>A001C020</clipName>
+        <file>A001_C012_AE0306.mxf</file>
     </clipId>
     <acesPipeline>
         <pipelineInfo>
@@ -28,6 +28,10 @@
                 <acesMinorVersion>0</acesMinorVersion>
                 <acesPatchVersion>3</acesPatchVersion>
             </acesVersion>
+            <framing>
+                <inputFrame>0 397 7168 3383</inputFrame>
+                <outputFrame>0 4096 0 1716</outputFrame>
+            </framing>
         </pipelineInfo>
         <inputTransform applied="true">
             <description>IDT from Acme Camera Company</description>
@@ -146,4 +150,4 @@
             <transformId>RRTODT.Acme.HDRODT.a1.v3</transformId>
         </outputTransform>
     </archivedAcesPipeline>
-    </acesMetadataFile>
+</acesMetadataFile>

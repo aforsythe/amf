@@ -89,7 +89,29 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+	
+	<!-- Define clip identification types -->
+	<xs:complexType name="sequenceType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="idx" type="xs:string" use="required"/>
+				<xs:attribute name="min" type="xs:nonNegativeInteger" use="required"/>
+				<xs:attribute name="max" type="xs:nonNegativeInteger" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
 
+	<xs:complexType name="clipIdType">
+		<xs:sequence>
+			<xs:element name="clipName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:choice minOccurs="1" maxOccurs="1">
+				<xs:element name="sequence" type="amf:sequenceType"/>
+				<xs:element name="file" type="xs:string"/>
+				<xs:element name="id" type="amf:uuidType"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	
 	<!-- Define transform types -->
 	<xs:complexType name="transformType">
 		<xs:sequence>
@@ -257,6 +279,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="fileInfo" type="amf:infoType" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="clipId" type="amf:clipIdType" minOccurs="1" maxOccurs="1"/>
 				<xs:element name="acesPipeline" type="amf:acesPipelineType" minOccurs="1" maxOccurs="1"/>
 				<xs:element name="archivedAcesPipeline" type="amf:acesPipelineType" minOccurs="0" maxOccurs="10"/>
 			</xs:sequence>
