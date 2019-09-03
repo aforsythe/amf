@@ -35,16 +35,16 @@
             <transformId>IDT.Acme.Camera.a1.v1</transformId>
         </inputTransform>
         <lookTransforms>
-            <asc-cdl lmtStackPosition="0" applied="true">
+            <asc-cdl lookTransformStackPosition="0" applied="true">
                 <description>Technical Grade</description>
-                <lmtWorkingSpace>
-                    <acesToLmtWorkingSpace>
+                <lookTransformWorkingSpace>
+                    <acesToLookTransformWorkingSpace>
                         <transformId>ACEScsc.ACES_to_ACEScct.a1.0.3</transformId>
-                    </acesToLmtWorkingSpace>
-                    <lmtWorkingSpaceToAces>
+                    </acesToLookTransformWorkingSpace>
+                    <lookTransformWorkingSpaceToAces>
                         <transformId>ACEScsc.ACEScct_to_ACES.a1.0.3</transformId>
-                    </lmtWorkingSpaceToAces>
-                </lmtWorkingSpace>
+                    </lookTransformWorkingSpaceToAces>
+                </lookTransformWorkingSpace>
                 <SOPNode>
                     <cdl:Slope>2.0 2.0 2.0</cdl:Slope>
                     <cdl:Offset>0.1 0.1 0.1</cdl:Offset>
@@ -54,34 +54,34 @@
                     <cdl:Saturation>1</cdl:Saturation>
                 </SatNode>
             </asc-cdl>
-            <lookFile lmtStackPosition="1" applied="false">
+            <lookFile lookTransformStackPosition="1" applied="false">
                 <description>Acme DI Show Look</description>
                 <hash algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</hash>
-                <lmtWorkingSpace>
-                    <acesToLmtWorkingSpace>
+                <lookTransformWorkingSpace>
+                    <acesToLookTransformWorkingSpace>
                         <description>Use ACEScc as the working space for this LMT</description>
                         <hash algorithm="sha256">07eb8b020fe8fc10c8c4b983cc37798324c7eee1319f07dd0028fca96f904a7f</hash>
                         <transformId>ACEScsc.ACES_to_ACEScc.a1.0.3</transformId>
-                    </acesToLmtWorkingSpace>
-                    <lmtWorkingSpaceToAces>
+                    </acesToLookTransformWorkingSpace>
+                    <lookTransformWorkingSpaceToAces>
                         <hash algorithm="sha256">ef461a45beded2c5204371f755ca2558e61743f288f3ccd719ce1de23ebcf9cb</hash>
                         <transformId>ACEScsc.ACEScc_to_ACES.a1.0.3</transformId>
-                    </lmtWorkingSpaceToAces>
-                </lmtWorkingSpace>
+                    </lookTransformWorkingSpaceToAces>
+                </lookTransformWorkingSpace>
                 <transformId>LMT.AcmeDI.a1.v5</transformId>
             </lookFile>
         </lookTransforms>
         <outputTransform>
-            <rrt>
+            <referenceRenderingTransform>
                 <description>ACES v1.0.3 RRT</description>
                 <hash algorithm="sha256">c81af4fb4a22ee0353308e4582708951df4682bf73f838c24bf44e585fc3bb61</hash>
                 <transformId>RRT.a1.0.3</transformId>
-            </rrt>
-            <odt>
+            </referenceRenderingTransform>
+            <outputDeviceTransform>
                 <description>P3D60 ODT</description>
                 <hash algorithm="sha1">efd279a82c2d52ee8c49dc0793499dc86bb1a4a3fa0dfb420d59c2814c55aea6</hash>
                 <transformId>ODT.Academy.P3D60_48nits.a1.0.3</transformId>
-            </odt>
+            </outputDeviceTransform>
         </outputTransform>
     </acesPipeline>
     <archivedAcesPipeline>
@@ -104,16 +104,16 @@
             <transformId>IDT.Acme.Camera.a1.v1</transformId>
         </inputTransform>
         <lookTransforms>
-            <asc-cdl lmtStackPosition="0" applied="false">
+            <asc-cdl lookTransformStackPosition="0" applied="false">
                 <description>Technical Grade</description>
-                <lmtWorkingSpace>
-                    <acesToLmtWorkingSpace>
+                <lookTransformWorkingSpace>
+                    <acesToLookTransformWorkingSpace>
                         <transformId>ACEScsc.ACES_to_ACEScct.a1.0.3</transformId>
-                    </acesToLmtWorkingSpace>
-                    <lmtWorkingSpaceToAces>
+                    </acesToLookTransformWorkingSpace>
+                    <lookTransformWorkingSpaceToAces>
                         <transformId>ACEScsc.ACEScct_to_ACES.a1.0.3</transformId>
-                    </lmtWorkingSpaceToAces>
-                </lmtWorkingSpace>
+                    </lookTransformWorkingSpaceToAces>
+                </lookTransformWorkingSpace>
                 <SOPNode>
                     <cdl:Slope>1.5 1.5 1.5</cdl:Slope>
                     <cdl:Offset>0.1 0.1 0.1</cdl:Offset>
@@ -123,20 +123,20 @@
                     <cdl:Saturation>1</cdl:Saturation>
                 </SatNode>
             </asc-cdl>
-            <lookFile lmtStackPosition="1" applied="false">
+            <lookFile lookTransformStackPosition="1" applied="false">
                 <description>Acme DI Show Look</description>
                 <hash algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</hash>
-                <lmtWorkingSpace>
-                    <acesToLmtWorkingSpace>
+                <lookTransformWorkingSpace>
+                    <acesToLookTransformWorkingSpace>
                         <description>Use ACEScc as the working space for this LMT</description>
                         <hash algorithm="sha256">07eb8b020fe8fc10c8c4b983cc37798324c7eee1319f07dd0028fca96f904a7f</hash>
                         <transformId>ACEScsc.ACES_to_ACEScc.a1.0.3</transformId>
-                    </acesToLmtWorkingSpace>
-                    <lmtWorkingSpaceToAces>
+                    </acesToLookTransformWorkingSpace>
+                    <lookTransformWorkingSpaceToAces>
                         <hash algorithm="sha256">ef461a45beded2c5204371f755ca2558e61743f288f3ccd719ce1de23ebcf9cb</hash>
                         <transformId>ACEScsc.ACEScc_to_ACES.a1.0.3</transformId>
-                    </lmtWorkingSpaceToAces>
-                </lmtWorkingSpace>
+                    </lookTransformWorkingSpaceToAces>
+                </lookTransformWorkingSpace>
                 <transformId>LMT.AcmeDI.a1.v5</transformId>
             </lookFile>
         </lookTransforms>

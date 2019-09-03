@@ -159,8 +159,8 @@
 						<xs:element name="transformId" type="amf:tnOutputTransform" minOccurs="1" maxOccurs="1"/>
 					</xs:sequence>
 					<xs:sequence>
-						<xs:element name="rrt" type="amf:rrtType" minOccurs="1" maxOccurs="1"/>
-						<xs:element name="odt" type="amf:odtType" minOccurs="1" maxOccurs="1"/>
+						<xs:element name="referenceRenderingTransform" type="amf:rrtType" minOccurs="1" maxOccurs="1"/>
+						<xs:element name="outputDeviceTransform" type="amf:odtType" minOccurs="1" maxOccurs="1"/>
 					</xs:sequence>
 				</xs:choice>
 			</xs:extension>
@@ -189,8 +189,8 @@
 
 	<xs:complexType name="lmtWorkingSpaceType">
 		<xs:sequence>
-			<xs:element name="acesToLmtWorkingSpace" type="amf:acesToLmtWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="lmtWorkingSpaceToAces" type="amf:lmtWorkingSpaceToAcesType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="acesToLookTransformWorkingSpace" type="amf:acesToLmtWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="lookTransformWorkingSpaceToAces" type="amf:lmtWorkingSpaceToAcesType" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 
@@ -205,9 +205,9 @@
 		<xs:complexContent>
 			<xs:extension base="amf:transformType">
 				<xs:sequence>
-					<xs:element name="lmtWorkingSpace" type="amf:lmtWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="lookTransformWorkingSpace" type="amf:lmtWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
-				<xs:attribute name="lmtStackPosition" type="amf:singleDigit" use="required"/>
+				<xs:attribute name="lookTransformStackPosition" type="amf:singleDigit" use="required"/>
 				<xs:attribute name="applied" type="xs:boolean" use="required"/>
 			</xs:extension>
 		</xs:complexContent>
