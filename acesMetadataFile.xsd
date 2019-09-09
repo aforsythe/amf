@@ -5,7 +5,7 @@
 
 	<!-- Import CDL Schema -->
 	<xs:import schemaLocation="ASC-CDL_schema_v1.01.xsd" namespace="urn:ASC:CDL:v1.01"/>
-
+	
 	<!-- Define general types -->
 	<xs:simpleType name="singleDigit">
 		<xs:restriction base="xs:integer">
@@ -26,9 +26,9 @@
 		<xs:list itemType="xs:nonNegativeInteger"/>
 	</xs:simpleType>
 	
-	<xs:simpleType name="fourNonNegIntList">
+	<xs:simpleType name="twoNonNegIntList">
 		<xs:restriction base="amf:nonNegIntList">
-			<xs:length value="4"/>
+			<xs:length value="2"/>
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -240,8 +240,11 @@
 	
 	<xs:complexType name="framingInfoType">
 		<xs:sequence>
-			<xs:element name="inputFrame" type="amf:fourNonNegIntList"  minOccurs="1" maxOccurs="1"/>
-			<xs:element name="outputFrame" type="amf:fourNonNegIntList"  minOccurs="1" maxOccurs="1"/>
+			<xs:element name="inputFrame" type="amf:twoNonNegIntList"  minOccurs="1" maxOccurs="1"/>
+			<xs:element name="extractionArea" type="amf:twoNonNegIntList"  minOccurs="1" maxOccurs="1"/>
+			<xs:element name="originTopLeft" type="amf:twoNonNegIntList" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="verticalScaling" type="xs:float" default="1.0" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="horizontalScaling" type="xs:float" default="1.0" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 

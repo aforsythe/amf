@@ -25,8 +25,11 @@
                 <acesPatchVersion>3</acesPatchVersion>
             </acesVersion>
             <framing>
-                <inputFrame>0 397 7168 3383</inputFrame>
-                <outputFrame>0 4096 0 1716</outputFrame>
+                <inputFrame>4448 3096</inputFrame>
+                <extractionArea>3840 2160</extractionArea>
+                <originTopLeft>304 468</originTopLeft>
+                <verticalScaling>1.0</verticalScaling>
+                <horizontalScaling>1.0</horizontalScaling>
             </framing>
         </pipelineInfo>
         <inputTransform applied="true">
