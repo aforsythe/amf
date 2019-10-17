@@ -9,7 +9,7 @@
             <creationDateTime>2020-11-10T13:20:00Z</creationDateTime>
             <modificationDateTime>2020-11-27T13:20:00Z</modificationDateTime>
         </dateTime>
-        <uuid>afe122be-59d3-4360-ad69-33c10108fa7a</uuid>
+        <uuid>urn:uuid:afe122be-59d3-4360-ad69-33c10108fa7a</uuid>
     </fileInfo>
     <clipId>
         <clipName>A001C012</clipName>
@@ -22,7 +22,7 @@
                 <creationDateTime>2021-06-29T13:20:00Z</creationDateTime>
                 <modificationDateTime>2019-09-19T13:20:00</modificationDateTime>
             </dateTime>
-            <uuid>be6Ec2ea-a6DC-6cBC-ff0D-AfCED5FF3Dd8</uuid>
+            <uuid>urn:uuid:be6Ec2ea-a6DC-6cBC-ff0D-AfCED5FF3Dd8</uuid>
             <acesVersion>
                 <acesMajorVersion>1</acesMajorVersion>
                 <acesMinorVersion>0</acesMinorVersion>
@@ -91,7 +91,7 @@
                 <creationDateTime>2021-05-29T13:20:00Z</creationDateTime>
                 <modificationDateTime>2019-03-19T13:20:00</modificationDateTime>
             </dateTime>
-            <uuid>d89931e8-bd46-4b70-b8e9-3068cf8b91a3</uuid>
+            <uuid>urn:uuid:d89931e8-bd46-4b70-b8e9-3068cf8b91a3</uuid>
             <acesVersion>
                 <acesMajorVersion>1</acesMajorVersion>
                 <acesMinorVersion>0</acesMinorVersion>
