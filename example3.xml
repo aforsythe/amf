@@ -45,14 +45,14 @@
                         <transformId>ACEScsc.ACEScct_to_ACES.a1.0.3</transformId>
                     </lookTransformWorkingSpaceToAces>
                 </lookTransformWorkingSpace>
-                <SOPNode>
+                <cdl:SOPNode>
                     <cdl:Slope>2.0 2.0 2.0</cdl:Slope>
                     <cdl:Offset>0.1 0.1 0.1</cdl:Offset>
                     <cdl:Power>1 1 1</cdl:Power>
-                </SOPNode>
-                <SatNode>
+                </cdl:SOPNode>
+                <cdl:SatNode>
                     <cdl:Saturation>1</cdl:Saturation>
-                </SatNode>
+                </cdl:SatNode>
             </asc-cdl>
             <lookFile lookTransformStackPosition="1" applied="false">
                 <description>Acme DI Show Look</description>
@@ -114,14 +114,14 @@
                         <transformId>ACEScsc.ACEScct_to_ACES.a1.0.3</transformId>
                     </lookTransformWorkingSpaceToAces>
                 </lookTransformWorkingSpace>
-                <SOPNode>
+                <cdl:SOPNode>
                     <cdl:Slope>1.5 1.5 1.5</cdl:Slope>
                     <cdl:Offset>0.1 0.1 0.1</cdl:Offset>
                     <cdl:Power>1 1 1</cdl:Power>
-                </SOPNode>
-                <SatNode>
+                </cdl:SOPNode>
+                <cdl:SatNode>
                     <cdl:Saturation>1</cdl:Saturation>
-                </SatNode>
+                </cdl:SatNode>
             </asc-cdl>
             <lookFile lookTransformStackPosition="1" applied="false">
                 <description>Acme DI Show Look</description>
