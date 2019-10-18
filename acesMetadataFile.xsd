@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema targetNamespace="urn:acesMetadata:acesMetadataFile:v2.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:amf="urn:acesMetadata:acesMetadataFile:v2.0"
-	xmlns:cdl="urn:ASC:CDL:v1.01" elementFormDefault="qualified" attributeFormDefault="unqualified" 
+	xmlns:cdl="urn:ASC:CDL:v1.01" 
 	xmlns:dcml="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"
-	xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	elementFormDefault="qualified" 
+	attributeFormDefault="unqualified">
 
 	<!-- Import CDL Schema -->
 	<xs:import schemaLocation="ASC-CDL_schema_v1.01.xsd" 
@@ -13,8 +15,8 @@
 	<xs:import schemaLocation="https://smpte-ra.org/sites/default/files/st433b-2008-am1-2011.xsd"
 		namespace="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/" />
 	
-	<!-- Import XML Sig -->
-	<xs:import schemaLocation="xmldsig-core-schema.xsd"
+	<!-- Import XML Sig Schema -->
+	<xs:import schemaLocation="https://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd"
 		namespace="http://www.w3.org/2000/09/xmldsig#" />
 
 	<!-- Define general types -->
