@@ -21,7 +21,7 @@
 		namespace="http://www.w3.org/2000/09/xmldsig#" />
 
 	<!-- Define general types -->
-	<xs:simpleType name="singleDigit">
+	<xs:simpleType name="singleDigitType">
 		<xs:restriction base="xs:integer">
 			<xs:totalDigits value="1"/>
 			<xs:minInclusive value="0"/>
@@ -212,7 +212,7 @@
 				<xs:sequence>
 					<xs:element name="lookTransformWorkingSpace" type="amf:lookTransformWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
-				<xs:attribute name="lookTransformStackPosition" type="amf:singleDigit" use="required"/>
+				<xs:attribute name="lookTransformStackPosition" type="amf:singleDigitType" use="required"/>
 				<xs:attribute name="applied" type="xs:boolean" use="required"/>
 			</xs:extension>
 		</xs:complexContent>
@@ -244,9 +244,9 @@
 
 	<xs:complexType name="acesVersionType">
 		<xs:sequence>
-			<xs:element name="acesMajorVersion" type="amf:singleDigit" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="acesMinorVersion" type="amf:singleDigit" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="acesPatchVersion" type="amf:singleDigit" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="acesMajorVersion" type="amf:singleDigitType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="acesMinorVersion" type="amf:singleDigitType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="acesPatchVersion" type="amf:singleDigitType" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 
