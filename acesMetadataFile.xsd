@@ -29,7 +29,7 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:complexType name="dateTime">
+	<xs:complexType name="dateTimeType">
 		<xs:sequence>
 			<xs:element name="creationDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="modificationDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
@@ -136,7 +136,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 
-	<xs:complexType name="rrtType">
+	<xs:complexType name="referenceRenderingTransformType">
 		<xs:complexContent>
 			<xs:extension base="amf:transformType">
 				<xs:sequence>
@@ -164,7 +164,7 @@
 						<xs:element name="transformId" type="amf:tnOutputTransform" minOccurs="1" maxOccurs="1"/>
 					</xs:sequence>
 					<xs:sequence>
-						<xs:element name="referenceRenderingTransform" type="amf:rrtType" minOccurs="1" maxOccurs="1"/>
+						<xs:element name="referenceRenderingTransform" type="amf:referenceRenderingTransformType" minOccurs="1" maxOccurs="1"/>
 						<xs:element name="outputDeviceTransform" type="amf:outputDeviceTransformType" minOccurs="1" maxOccurs="1"/>
 					</xs:sequence>
 				</xs:choice>
@@ -253,7 +253,7 @@
 	<xs:complexType name="infoType">
 		<xs:sequence>
 			<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="dateTime" type="amf:dateTime" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dateTime" type="amf:dateTimeType" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="uuid" type="dcml:UUIDType" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
