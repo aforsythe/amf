@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="urn:acesMetadata:acesMetadataFile:v2.0"
-	xmlns:amf="urn:acesMetadata:acesMetadataFile:v2.0"
+<xs:schema targetNamespace="urn:acesMetadata:acesMetadataFile:v1.0"
+	xmlns:amf="urn:acesMetadata:acesMetadataFile:v1.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:cdl="urn:ASC:CDL:v1.01" 
 	xmlns:dcml="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"
@@ -291,7 +291,7 @@
 				<xs:element name="acesPipeline" type="amf:acesPipelineType" minOccurs="1" maxOccurs="1"/>
 				<xs:element name="archivedAcesPipeline" type="amf:acesPipelineType" minOccurs="0" maxOccurs="10"/>
 			</xs:sequence>
-			<xs:attribute name="version" type="xs:decimal" use="required" fixed="2.0"/>
+			<xs:attribute name="version" type="xs:decimal" use="required" fixed="1.0"/>
 		</xs:complexType>
 	</xs:element>
 
