@@ -112,7 +112,7 @@
 			<xs:choice minOccurs="1" maxOccurs="1">
 				<xs:element name="sequence" type="amf:sequenceType"/>
 				<xs:element name="file" type="xs:string"/>
-				<xs:element name="id" type="dcml:UUIDType"/>
+				<xs:element name="uuid" type="dcml:UUIDType"/>
 			</xs:choice>
 		</xs:sequence>
 	</xs:complexType>
