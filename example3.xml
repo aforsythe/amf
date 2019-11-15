@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<acesMetadataFile xmlns="urn:acesMetadata:acesMetadataFile:v2.0"
+<acesMetadataFile 
+    xmlns="urn:acesMetadata:acesMetadataFile:v1.0"
+    xsi:schemaLocation="urn:acesMetadata:acesMetadataFile:v1.0 file:acesMetadataFile.xsd"
     xmlns:cdl="urn:ASC:CDL:v1.01"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="urn:acesMetadata:acesMetadataFile:v2.0 file:acesMetadataFile.xsd" version="2.0">
+    version="1.0">
     <fileInfo>
         <description>Oscar Winning Movie</description>
         <dateTime>
@@ -13,7 +15,7 @@
     </fileInfo>
     <clipId>
         <clipName>A001C030</clipName>
-        <id>urn:uuid:797c7cd8-4eb1-4f67-afce-af2b0a1d0285</id>
+        <uuid>urn:uuid:797c7cd8-4eb1-4f67-afce-af2b0a1d0285</uuid>
     </clipId>
     <acesPipeline>
         <pipelineInfo>

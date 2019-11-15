@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<acesMetadataFile xmlns="urn:acesMetadata:acesMetadataFile:v2.0"
+<acesMetadataFile 
+    xmlns="urn:acesMetadata:acesMetadataFile:v1.0"
+    xsi:schemaLocation="urn:acesMetadata:acesMetadataFile:v1.0 file:acesMetadataFile.xsd"
     xmlns:cdl="urn:ASC:CDL:v1.01"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="urn:acesMetadata:acesMetadataFile:v2.0 file:acesMetadataFile.xsd" version="2.0">
+    version="1.0">
     <fileInfo>
         <description>Oscar Winning Movie</description>
         <dateTime>
