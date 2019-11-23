@@ -8,21 +8,21 @@
     <fileInfo>
         <description>Oscar Winning Movie</description>
         <dateTime>
-            <creationDateTime>2020-11-10T13:20:00Z</creationDateTime>
-            <modificationDateTime>2020-11-27T13:20:00Z</modificationDateTime>
+            <creationDateTime>2019-09-19T13:20:00</creationDateTime>
+            <modificationDateTime>2019-11-27T13:20:00Z</modificationDateTime>
         </dateTime>
         <uuid>urn:uuid:afe122be-59d3-4360-ad69-33c10108fa7a</uuid>
     </fileInfo>
     <clipId>
-        <clipName>A001C020</clipName>
-        <file>A001_C012_AE0306.mxf</file>
+        <clipName>A001C012</clipName>
+        <sequence idx="#" min="1" max="240">A001_C012_AE0306_###.exr</sequence>
     </clipId>
     <acesPipeline>
         <pipelineInfo>
             <description>Oscar Winning Movie Final DI</description>
             <dateTime>
-                <creationDateTime>2021-06-29T13:20:00Z</creationDateTime>
-                <modificationDateTime>2019-09-19T13:20:00</modificationDateTime>
+                <creationDateTime>2019-09-19T13:20:00</creationDateTime>
+                <modificationDateTime>2019-11-27T13:20:00Z</modificationDateTime>
             </dateTime>
             <uuid>urn:uuid:be6Ec2ea-a6DC-6cBC-ff0D-AfCED5FF3Dd8</uuid>
             <acesVersion>
@@ -47,14 +47,14 @@
                         <transformId>ACEScsc.ACEScct_to_ACES.a1.0.3</transformId>
                     </lookTransformWorkingSpaceToAces>
                 </lookTransformWorkingSpace>
-                <cdl:SOPNode>
+                <cdl:ASC_SOP>
                     <cdl:Slope>2.0 2.0 2.0</cdl:Slope>
                     <cdl:Offset>0.1 0.1 0.1</cdl:Offset>
                     <cdl:Power>1 1 1</cdl:Power>
-                </cdl:SOPNode>
-                <cdl:SatNode>
+                </cdl:ASC_SOP>
+                <cdl:ASC_SAT>
                     <cdl:Saturation>1</cdl:Saturation>
-                </cdl:SatNode>
+                </cdl:ASC_SAT>
             </asc-cdl>
             <lookFile lookTransformStackPosition="1" applied="false">
                 <description>Acme DI Show Look</description>
@@ -86,66 +86,4 @@
             </outputDeviceTransform>
         </outputTransform>
     </acesPipeline>
-    <archivedAcesPipeline>
-        <pipelineInfo>
-            <description>Oscar Winning Movie Final DI</description>
-            <dateTime>
-                <creationDateTime>2021-05-29T13:20:00Z</creationDateTime>
-                <modificationDateTime>2019-03-19T13:20:00</modificationDateTime>
-            </dateTime>
-            <uuid>urn:uuid:d89931e8-bd46-4b70-b8e9-3068cf8b91a3</uuid>
-            <acesVersion>
-                <acesMajorVersion>1</acesMajorVersion>
-                <acesMinorVersion>0</acesMinorVersion>
-                <acesPatchVersion>3</acesPatchVersion>
-            </acesVersion>
-        </pipelineInfo>
-        <inputTransform applied="true">
-            <description>IDT from Acme Camera Company</description>
-            <hash algorithm="md5">1531ea6ef06c5b0a5bea80c94f60c7b68e3989e3c90b8ebd25c28aa4670c30f8</hash>
-            <transformId>IDT.Acme.Camera.a1.v1</transformId>
-        </inputTransform>
-        <lookTransforms>
-            <asc-cdl lookTransformStackPosition="0" applied="false">
-                <description>Technical Grade</description>
-                <lookTransformWorkingSpace>
-                    <acesToLookTransformWorkingSpace>
-                        <transformId>ACEScsc.ACES_to_ACEScct.a1.0.3</transformId>
-                    </acesToLookTransformWorkingSpace>
-                    <lookTransformWorkingSpaceToAces>
-                        <transformId>ACEScsc.ACEScct_to_ACES.a1.0.3</transformId>
-                    </lookTransformWorkingSpaceToAces>
-                </lookTransformWorkingSpace>
-                <cdl:SOPNode>
-                    <cdl:Slope>1.5 1.5 1.5</cdl:Slope>
-                    <cdl:Offset>0.1 0.1 0.1</cdl:Offset>
-                    <cdl:Power>1 1 1</cdl:Power>
-                </cdl:SOPNode>
-                <cdl:SatNode>
-                    <cdl:Saturation>1</cdl:Saturation>
-                </cdl:SatNode>
-            </asc-cdl>
-            <lookFile lookTransformStackPosition="1" applied="false">
-                <description>Acme DI Show Look</description>
-                <hash algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</hash>
-                <lookTransformWorkingSpace>
-                    <acesToLookTransformWorkingSpace>
-                        <description>Use ACEScc as the working space for this LMT</description>
-                        <hash algorithm="sha256">07eb8b020fe8fc10c8c4b983cc37798324c7eee1319f07dd0028fca96f904a7f</hash>
-                        <transformId>ACEScsc.ACES_to_ACEScc.a1.0.3</transformId>
-                    </acesToLookTransformWorkingSpace>
-                    <lookTransformWorkingSpaceToAces>
-                        <hash algorithm="sha256">ef461a45beded2c5204371f755ca2558e61743f288f3ccd719ce1de23ebcf9cb</hash>
-                        <transformId>ACEScsc.ACEScc_to_ACES.a1.0.3</transformId>
-                    </lookTransformWorkingSpaceToAces>
-                </lookTransformWorkingSpace>
-                <transformId>LMT.AcmeDI.a1.v5</transformId>
-            </lookFile>
-        </lookTransforms>
-        <outputTransform>
-            <description>Some HDR Output Transform</description>
-            <hash algorithm="sha256">9ffcd28772e244f9a3c6e9893f499f2b4f2f3313d292db51aeea4fd3f65f00d9</hash>
-            <transformId>RRTODT.Acme.HDRODT.a1.v3</transformId>
-        </outputTransform>
-    </archivedAcesPipeline>
 </acesMetadataFile>

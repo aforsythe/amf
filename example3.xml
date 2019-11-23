@@ -8,8 +8,8 @@
     <fileInfo>
         <description>Oscar Winning Movie</description>
         <dateTime>
-            <creationDateTime>2020-11-10T13:20:00Z</creationDateTime>
-            <modificationDateTime>2020-11-27T13:20:00Z</modificationDateTime>
+            <creationDateTime>2019-09-19T13:20:00</creationDateTime>
+            <modificationDateTime>2019-11-27T13:20:00Z</modificationDateTime>
         </dateTime>
         <uuid>urn:uuid:afe122be-59d3-4360-ad69-33c10108fa7a</uuid>
     </fileInfo>
@@ -19,10 +19,10 @@
     </clipId>
     <acesPipeline>
         <pipelineInfo>
-            <description>Oscar Winning Movie Final DI</description>
+            <description>Oscar Winning Movie DI Regrade</description>
             <dateTime>
-                <creationDateTime>2021-06-29T13:20:00Z</creationDateTime>
-                <modificationDateTime>2019-09-19T13:20:00</modificationDateTime>
+                <creationDateTime>2020-11-10T13:20:00Z</creationDateTime>
+                <modificationDateTime>2020-11-10T13:20:00Z</modificationDateTime>
             </dateTime>
             <uuid>urn:uuid:be6Ec2ea-a6DC-6cBC-ff0D-AfCED5FF3Dd8</uuid>
             <acesVersion>
@@ -90,8 +90,8 @@
         <pipelineInfo>
             <description>Oscar Winning Movie Final DI</description>
             <dateTime>
-                <creationDateTime>2021-05-29T13:20:00Z</creationDateTime>
-                <modificationDateTime>2019-03-19T13:20:00</modificationDateTime>
+                <creationDateTime>2019-09-19T13:20:00</creationDateTime>
+                <modificationDateTime>2019-11-27T13:20:00Z</modificationDateTime>
             </dateTime>
             <uuid>urn:uuid:d89931e8-bd46-4b70-b8e9-3068cf8b91a3</uuid>
             <acesVersion>
