@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<acesMetadataFile 
-    xmlns="urn:acesMetadata:acesMetadataFile:v1.0"
+<amf:acesMetadataFile 
+    xmlns:amf="urn:acesMetadata:acesMetadataFile:v1.0"
     xsi:schemaLocation="urn:acesMetadata:acesMetadataFile:v1.0 file:acesMetadataFile.xsd"
     xmlns:cdl="urn:ASC:CDL:v1.01"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     version="1.0">
-    <fileInfo>
-        <description>Oscar Winning Movie</description>
-        <dateTime>
-            <creationDateTime>2019-09-19T13:20:00</creationDateTime>
-            <modificationDateTime>2019-11-27T13:20:00Z</modificationDateTime>
-        </dateTime>
-        <uuid>urn:uuid:afe122be-59d3-4360-ad69-33c10108fa7a</uuid>
-    </fileInfo>
-    <clipId>
-        <clipName>A001C012</clipName>
-        <sequence idx="#" min="1" max="240">A001_C012_AE0306_###.exr</sequence>
-    </clipId>
-    <acesPipeline>
-        <pipelineInfo>
-            <description>Oscar Winning Movie Final DI</description>
-            <dateTime>
-                <creationDateTime>2019-09-19T13:20:00</creationDateTime>
-                <modificationDateTime>2019-11-27T13:20:00Z</modificationDateTime>
-            </dateTime>
-            <uuid>urn:uuid:be6Ec2ea-a6DC-6cBC-ff0D-AfCED5FF3Dd8</uuid>
-            <acesVersion>
-                <acesMajorVersion>1</acesMajorVersion>
-                <acesMinorVersion>0</acesMinorVersion>
-                <acesPatchVersion>3</acesPatchVersion>
-            </acesVersion>
-        </pipelineInfo>
-        <inputTransform applied="true">
-            <description>IDT from Acme Camera Company</description>
-            <hash algorithm="sha256">1531ea6ef06c5b0a5bea80c94f60c7b68e3989e3c90b8ebd25c28aa4670c30f8</hash>
-            <transformId>IDT.Acme.Camera.a1.v1</transformId>
-        </inputTransform>
-        <lookTransforms>
-            <asc-cdl lookTransformStackPosition="0" applied="true">
-                <description>Technical Grade</description>
-                <lookTransformWorkingSpace>
-                    <acesToLookTransformWorkingSpace>
-                        <transformId>ACEScsc.ACES_to_ACEScct.a1.0.3</transformId>
-                    </acesToLookTransformWorkingSpace>
-                    <lookTransformWorkingSpaceToAces>
-                        <transformId>ACEScsc.ACEScct_to_ACES.a1.0.3</transformId>
-                    </lookTransformWorkingSpaceToAces>
-                </lookTransformWorkingSpace>
+    <amf:fileInfo>
+        <amf:description>Oscar Winning Movie</amf:description>
+        <amf:dateTime>
+            <amf:creationDateTime>2019-09-19T13:20:00</amf:creationDateTime>
+            <amf:modificationDateTime>2019-11-27T13:20:00Z</amf:modificationDateTime>
+        </amf:dateTime>
+        <amf:uuid>urn:uuid:afe122be-59d3-4360-ad69-33c10108fa7a</amf:uuid>
+    </amf:fileInfo>
+    <amf:clipId>
+        <amf:clipName>A001C012</amf:clipName>
+        <amf:sequence idx="#" min="1" max="240">A001_C012_AE0306_###.exr</amf:sequence>
+    </amf:clipId>
+    <amf:acesPipeline>
+        <amf:pipelineInfo>
+            <amf:description>Oscar Winning Movie Final DI</amf:description>
+            <amf:dateTime>
+                <amf:creationDateTime>2019-09-19T13:20:00</amf:creationDateTime>
+                <amf:modificationDateTime>2019-11-27T13:20:00Z</amf:modificationDateTime>
+            </amf:dateTime>
+            <amf:uuid>urn:uuid:be6Ec2ea-a6DC-6cBC-ff0D-AfCED5FF3Dd8</amf:uuid>
+            <amf:acesVersion>
+                <amf:acesMajorVersion>1</amf:acesMajorVersion>
+                <amf:acesMinorVersion>0</amf:acesMinorVersion>
+                <amf:acesPatchVersion>3</amf:acesPatchVersion>
+            </amf:acesVersion>
+        </amf:pipelineInfo>
+        <amf:inputTransform applied="true">
+            <amf:description>IDT from Acme Camera Company</amf:description>
+            <amf:hash algorithm="sha256">1531ea6ef06c5b0a5bea80c94f60c7b68e3989e3c90b8ebd25c28aa4670c30f8</amf:hash>
+            <amf:transformId>IDT.Acme.Camera.a1.v1</amf:transformId>
+        </amf:inputTransform>
+        <amf:lookTransforms>
+            <amf:asc-cdl lookTransformStackPosition="0" applied="true">
+                <amf:description>Technical Grade</amf:description>
+                <amf:lookTransformWorkingSpace>
+                    <amf:acesToLookTransformWorkingSpace>
+                        <amf:transformId>ACEScsc.ACES_to_ACEScct.a1.0.3</amf:transformId>
+                    </amf:acesToLookTransformWorkingSpace>
+                    <amf:lookTransformWorkingSpaceToAces>
+                        <amf:transformId>ACEScsc.ACEScct_to_ACES.a1.0.3</amf:transformId>
+                    </amf:lookTransformWorkingSpaceToAces>
+                </amf:lookTransformWorkingSpace>
                 <cdl:ASC_SOP>
                     <cdl:Slope>2.0 2.0 2.0</cdl:Slope>
                     <cdl:Offset>0.1 0.1 0.1</cdl:Offset>
@@ -55,35 +55,35 @@
                 <cdl:ASC_SAT>
                     <cdl:Saturation>1</cdl:Saturation>
                 </cdl:ASC_SAT>
-            </asc-cdl>
-            <lookFile lookTransformStackPosition="1" applied="false">
-                <description>Acme DI Show Look</description>
-                <hash algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</hash>
-                <lookTransformWorkingSpace>
-                    <acesToLookTransformWorkingSpace>
-                        <description>Use ACEScc as the working space for this LMT</description>
-                        <hash algorithm="sha256">07eb8b020fe8fc10c8c4b983cc37798324c7eee1319f07dd0028fca96f904a7f</hash>
-                        <transformId>ACEScsc.ACES_to_ACEScc.a1.0.3</transformId>
-                    </acesToLookTransformWorkingSpace>
-                    <lookTransformWorkingSpaceToAces>
-                        <hash algorithm="sha256">ef461a45beded2c5204371f755ca2558e61743f288f3ccd719ce1de23ebcf9cb</hash>
-                        <transformId>ACEScsc.ACEScc_to_ACES.a1.0.3</transformId>
-                    </lookTransformWorkingSpaceToAces>
-                </lookTransformWorkingSpace>
-                <transformId>LMT.AcmeDI.a1.v5</transformId>
-            </lookFile>
-        </lookTransforms>
-        <outputTransform>
-            <referenceRenderingTransform>
-                <description>ACES v1.0.3 RRT</description>
-                <hash algorithm="sha256">c81af4fb4a22ee0353308e4582708951df4682bf73f838c24bf44e585fc3bb61</hash>
-                <transformId>RRT.a1.0.3</transformId>
-            </referenceRenderingTransform>
-            <outputDeviceTransform>
-                <description>P3D60 ODT</description>
-                <hash algorithm="sha1">efd279a82c2d52ee8c49dc0793499dc86bb1a4a3fa0dfb420d59c2814c55aea6</hash>
-                <transformId>ODT.Academy.P3D60_48nits.a1.0.3</transformId>
-            </outputDeviceTransform>
-        </outputTransform>
-    </acesPipeline>
-</acesMetadataFile>
+            </amf:asc-cdl>
+            <amf:lookFile lookTransformStackPosition="1" applied="false">
+                <amf:description>Acme DI Show Look</amf:description>
+                <amf:hash algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</amf:hash>
+                <amf:lookTransformWorkingSpace>
+                    <amf:acesToLookTransformWorkingSpace>
+                        <amf:description>Use ACEScc as the working space for this LMT</amf:description>
+                        <amf:hash algorithm="sha256">07eb8b020fe8fc10c8c4b983cc37798324c7eee1319f07dd0028fca96f904a7f</amf:hash>
+                        <amf:transformId>ACEScsc.ACES_to_ACEScc.a1.0.3</amf:transformId>
+                    </amf:acesToLookTransformWorkingSpace>
+                    <amf:lookTransformWorkingSpaceToAces>
+                        <amf:hash algorithm="sha256">ef461a45beded2c5204371f755ca2558e61743f288f3ccd719ce1de23ebcf9cb</amf:hash>
+                        <amf:transformId>ACEScsc.ACEScc_to_ACES.a1.0.3</amf:transformId>
+                    </amf:lookTransformWorkingSpaceToAces>
+                </amf:lookTransformWorkingSpace>
+                <amf:transformId>LMT.AcmeDI.a1.v5</amf:transformId>
+            </amf:lookFile>
+        </amf:lookTransforms>
+        <amf:outputTransform>
+            <amf:referenceRenderingTransform>
+                <amf:description>ACES v1.0.3 RRT</amf:description>
+                <amf:hash algorithm="sha256">c81af4fb4a22ee0353308e4582708951df4682bf73f838c24bf44e585fc3bb61</amf:hash>
+                <amf:transformId>RRT.a1.0.3</amf:transformId>
+            </amf:referenceRenderingTransform>
+            <amf:outputDeviceTransform>
+                <amf:description>P3D60 ODT</amf:description>
+                <amf:hash algorithm="sha1">efd279a82c2d52ee8c49dc0793499dc86bb1a4a3fa0dfb420d59c2814c55aea6</amf:hash>
+                <amf:transformId>ODT.Academy.P3D60_48nits.a1.0.3</amf:transformId>
+            </amf:outputDeviceTransform>
+        </amf:outputTransform>
+    </amf:acesPipeline>
+</amf:acesMetadataFile>
