@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<amf:acesMetadataFile 
-    xmlns:amf="urn:acesMetadata:acesMetadataFile:v1.0"
+<aces:acesMetadataFile 
+    xmlns:aces="urn:acesMetadata:acesMetadataFile:v1.0"
     xsi:schemaLocation="urn:acesMetadata:acesMetadataFile:v1.0 file:acesMetadataFile.xsd"
     xmlns:cdl="urn:ASC:CDL:v1.01"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     version="1.0">
-    <amf:fileInfo>
-        <amf:dateTime>
-            <amf:creationDateTime>2020-11-10T13:20:00Z</amf:creationDateTime>
-            <amf:modificationDateTime>2020-11-10T13:20:00Z</amf:modificationDateTime>
-        </amf:dateTime>
-    </amf:fileInfo>
-    <amf:acesPipeline>
-        <amf:pipelineInfo>
-            <amf:dateTime>
-                <amf:creationDateTime>2020-11-10T13:20:00Z</amf:creationDateTime>
-                <amf:modificationDateTime>2020-11-10T13:20:00Z</amf:modificationDateTime>
-            </amf:dateTime>
-            <amf:acesVersion>
-                <amf:acesMajorVersion>1</amf:acesMajorVersion>
-                <amf:acesMinorVersion>1</amf:acesMinorVersion>
-                <amf:acesPatchVersion>0</amf:acesPatchVersion>
-            </amf:acesVersion>
-        </amf:pipelineInfo>
-        <amf:outputTransform>
-            <amf:transformId>RRTODT.Academy.Rec2020_1000nits_15nits_ST2084.a1.1.0</amf:transformId>
-        </amf:outputTransform>
-    </amf:acesPipeline>
- </amf:acesMetadataFile>
+    <aces:amfInfo>
+        <aces:dateTime>
+            <aces:creationDateTime>2020-11-10T13:20:00Z</aces:creationDateTime>
+            <aces:modificationDateTime>2020-11-10T13:20:00Z</aces:modificationDateTime>
+        </aces:dateTime>
+    </aces:amfInfo>
+    <aces:pipeline>
+        <aces:pipelineInfo>
+            <aces:dateTime>
+                <aces:creationDateTime>2020-11-10T13:20:00Z</aces:creationDateTime>
+                <aces:modificationDateTime>2020-11-10T13:20:00Z</aces:modificationDateTime>
+            </aces:dateTime>
+            <aces:systemVersion>
+                <aces:majorVersion>1</aces:majorVersion>
+                <aces:minorVersion>1</aces:minorVersion>
+                <aces:patchVersion>0</aces:patchVersion>
+            </aces:systemVersion>
+        </aces:pipelineInfo>
+        <aces:outputTransform>
+            <aces:transformId>RRTODT.Academy.Rec2020_1000nits_15nits_ST2084.a1.1.0</aces:transformId>
+        </aces:outputTransform>
+    </aces:pipeline>
+ </aces:acesMetadataFile>

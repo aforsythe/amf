@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema targetNamespace="urn:acesMetadata:acesMetadataFile:v1.0"
-	xmlns:amf="urn:acesMetadata:acesMetadataFile:v1.0"
+	xmlns:aces="urn:acesMetadata:acesMetadataFile:v1.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:cdl="urn:ASC:CDL:v1.01" 
 	xmlns:dcml="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"
@@ -67,13 +67,13 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="tnAcesToLookTransformWorkingSpace">
+	<xs:simpleType name="tnToLookTransformWorkingSpace">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="(ACEScsc\.\S+\.a\d{1}\.\d{1}\.\d{1})"/>
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="tnLookTransformWorkingSpaceToAces">
+	<xs:simpleType name="tnFromLookTransformWorkingSpace">
 		<xs:restriction base="xs:string">
 			<xs:pattern value="(ACEScsc\.\S+\.a\S+\.\S+\.\S+)"/>
 		</xs:restriction>
@@ -90,7 +90,7 @@
 	<xs:complexType name="hashType">
 		<xs:simpleContent>
 			<xs:extension base="xs:string">
-				<xs:attribute name="algorithm" type="amf:hashAlgoType" use="required"/>
+				<xs:attribute name="algorithm" type="aces:hashAlgoType" use="required"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
@@ -110,7 +110,7 @@
 		<xs:sequence>
 			<xs:element name="clipName" type="xs:string" minOccurs="1" maxOccurs="1"/>
 			<xs:choice minOccurs="1" maxOccurs="1">
-				<xs:element name="sequence" type="amf:sequenceType"/>
+				<xs:element name="sequence" type="aces:sequenceType"/>
 				<xs:element name="file" type="xs:string"/>
 				<xs:element name="uuid" type="dcml:UUIDType"/>
 			</xs:choice>
@@ -121,15 +121,15 @@
 	<xs:complexType name="transformType">
 		<xs:sequence>
 			<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="hash" type="amf:hashType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="hash" type="aces:hashType" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 
 	<xs:complexType name="inputTransformType">
 		<xs:complexContent>
-			<xs:extension base="amf:transformType">
+			<xs:extension base="aces:transformType">
 				<xs:sequence>
-					<xs:element name="transformId" type="amf:tnInputTransform" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="transformId" type="aces:tnInputTransform" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 				<xs:attribute name="applied" type="xs:boolean" use="required"/>
 			</xs:extension>
@@ -138,9 +138,9 @@
 
 	<xs:complexType name="referenceRenderingTransformType">
 		<xs:complexContent>
-			<xs:extension base="amf:transformType">
+			<xs:extension base="aces:transformType">
 				<xs:sequence>
-					<xs:element name="transformId" type="amf:tnReferenceRenderingTransform" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="transformId" type="aces:tnReferenceRenderingTransform" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -148,9 +148,9 @@
 
 	<xs:complexType name="outputDeviceTransformType">
 		<xs:complexContent>
-			<xs:extension base="amf:transformType">
+			<xs:extension base="aces:transformType">
 				<xs:sequence>
-					<xs:element name="transformId" type="amf:tnOutputDeviceTransform" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="transformId" type="aces:tnOutputDeviceTransform" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -158,35 +158,35 @@
 
 	<xs:complexType name="outputTransformType">
 		<xs:complexContent>
-			<xs:extension base="amf:transformType">
+			<xs:extension base="aces:transformType">
 				<xs:choice minOccurs="1" maxOccurs="1">
 					<xs:sequence>
-						<xs:element name="transformId" type="amf:tnOutputTransform" minOccurs="1" maxOccurs="1"/>
+						<xs:element name="transformId" type="aces:tnOutputTransform" minOccurs="1" maxOccurs="1"/>
 					</xs:sequence>
 					<xs:sequence>
-						<xs:element name="referenceRenderingTransform" type="amf:referenceRenderingTransformType" minOccurs="1" maxOccurs="1"/>
-						<xs:element name="outputDeviceTransform" type="amf:outputDeviceTransformType" minOccurs="1" maxOccurs="1"/>
+						<xs:element name="referenceRenderingTransform" type="aces:referenceRenderingTransformType" minOccurs="1" maxOccurs="1"/>
+						<xs:element name="outputDeviceTransform" type="aces:outputDeviceTransformType" minOccurs="1" maxOccurs="1"/>
 					</xs:sequence>
 				</xs:choice>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 
-	<xs:complexType name="acesToLookTransformWorkingSpaceType">
+	<xs:complexType name="toLookTransformWorkingSpaceType">
 		<xs:complexContent>
-			<xs:extension base="amf:transformType">
+			<xs:extension base="aces:transformType">
 				<xs:sequence>
-					<xs:element name="transformId" type="amf:tnAcesToLookTransformWorkingSpace" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="transformId" type="aces:tnToLookTransformWorkingSpace" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 
-	<xs:complexType name="lookTransformWorkingSpaceToAcesType">
+	<xs:complexType name="fromLookTransformWorkingSpaceType">
 		<xs:complexContent>
-			<xs:extension base="amf:transformType">
+			<xs:extension base="aces:transformType">
 				<xs:sequence>
-					<xs:element name="transformId" type="amf:tnLookTransformWorkingSpaceToAces" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="transformId" type="aces:tnFromLookTransformWorkingSpace" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -194,25 +194,25 @@
 
 	<xs:complexType name="lookTransformWorkingSpaceType">
 		<xs:sequence>
-			<xs:element name="acesToLookTransformWorkingSpace" type="amf:acesToLookTransformWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="lookTransformWorkingSpaceToAces" type="amf:lookTransformWorkingSpaceToAcesType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="toLookTransformWorkingSpace" type="aces:toLookTransformWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="fromLookTransformWorkingSpace" type="aces:fromLookTransformWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 
 	<xs:complexType name="lookTransformsType">
 		<xs:choice minOccurs="1" maxOccurs="5">
-			<xs:element name="lookFile" type="amf:lookFileType"/>
-			<xs:element name="asc-cdl" type="amf:cdlType"/>
+			<xs:element name="lookFile" type="aces:lookFileType"/>
+			<xs:element name="asc-cdl" type="aces:cdlType"/>
 		</xs:choice>
 	</xs:complexType>
 
 	<xs:complexType name="lookTransformType">
 		<xs:complexContent>
-			<xs:extension base="amf:transformType">
+			<xs:extension base="aces:transformType">
 				<xs:sequence>
-					<xs:element name="lookTransformWorkingSpace" type="amf:lookTransformWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="lookTransformWorkingSpace" type="aces:lookTransformWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
-				<xs:attribute name="lookTransformStackPosition" type="amf:singleDigitType" use="required"/>
+				<xs:attribute name="lookTransformStackPosition" type="aces:singleDigitType" use="required"/>
 				<xs:attribute name="applied" type="xs:boolean" use="required"/>
 			</xs:extension>
 		</xs:complexContent>
@@ -220,7 +220,7 @@
 
 	<xs:complexType name="cdlType">
 		<xs:complexContent>
-			<xs:extension base="amf:lookTransformType">
+			<xs:extension base="aces:lookTransformType">
 				<xs:choice minOccurs="1" maxOccurs="1">
 					<xs:sequence>
 						<xs:element ref="cdl:SOPNode" minOccurs="1" maxOccurs="1"/>
@@ -234,51 +234,51 @@
 
 	<xs:complexType name="lookFileType">
 		<xs:complexContent>
-			<xs:extension base="amf:lookTransformType">
+			<xs:extension base="aces:lookTransformType">
 				<xs:sequence>
-					<xs:element name="transformId" type="amf:tnLookTransform" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="transformId" type="aces:tnLookTransform" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 
-	<xs:complexType name="acesVersionType">
+	<xs:complexType name="versionType">
 		<xs:sequence>
-			<xs:element name="acesMajorVersion" type="amf:singleDigitType" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="acesMinorVersion" type="amf:singleDigitType" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="acesPatchVersion" type="amf:singleDigitType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="majorVersion" type="aces:singleDigitType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="minorVersion" type="aces:singleDigitType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="patchVersion" type="aces:singleDigitType" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 
 	<xs:complexType name="infoType">
 		<xs:sequence>
 			<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="dateTime" type="amf:dateTimeType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="dateTime" type="aces:dateTimeType" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="uuid" type="dcml:UUIDType" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 
 	<xs:complexType name="pipelineInfoType">
 		<xs:complexContent>
-			<xs:extension base="amf:infoType">
+			<xs:extension base="aces:infoType">
 				<xs:sequence>
-					<xs:element name="acesVersion" type="amf:acesVersionType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="systemVersion" type="aces:versionType" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 
-	<xs:complexType name="acesPipelineType">
+	<xs:complexType name="pipelineType">
 		<xs:sequence>
-			<xs:element name="pipelineInfo" type="amf:pipelineInfoType" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="inputTransform" type="amf:inputTransformType" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="lookTransforms" type="amf:lookTransformsType" minOccurs="0" maxOccurs="1">
+			<xs:element name="pipelineInfo" type="aces:pipelineInfoType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="inputTransform" type="aces:inputTransformType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="lookTransforms" type="aces:lookTransformsType" minOccurs="0" maxOccurs="1">
 				<xs:unique name="uniqueLookTransformStackPosition">
-					<xs:selector xpath="amf:lookFile | amf:asc-cdl" />
+					<xs:selector xpath="aces:lookFile | aces:asc-cdl" />
 					<xs:field xpath="@lookTransformStackPosition" />
 				</xs:unique>
 			</xs:element>
-			<xs:element name="outputTransform" type="amf:outputTransformType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="outputTransform" type="aces:outputTransformType" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 
@@ -286,10 +286,10 @@
 	<xs:element name="acesMetadataFile">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="fileInfo" type="amf:infoType" minOccurs="1" maxOccurs="1"/>
-				<xs:element name="clipId" type="amf:clipIdType" minOccurs="0" maxOccurs="1"/>
-				<xs:element name="acesPipeline" type="amf:acesPipelineType" minOccurs="1" maxOccurs="1"/>
-				<xs:element name="archivedAcesPipeline" type="amf:acesPipelineType" minOccurs="0" maxOccurs="10"/>
+				<xs:element name="amfInfo" type="aces:infoType" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="clipId" type="aces:clipIdType" minOccurs="0" maxOccurs="1"/>
+				<xs:element name="pipeline" type="aces:pipelineType" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="archivedPipeline" type="aces:pipelineType" minOccurs="0" maxOccurs="10"/>
 			</xs:sequence>
 			<xs:attribute name="version" type="xs:decimal" use="required" fixed="1.0"/>
 		</xs:complexType>
