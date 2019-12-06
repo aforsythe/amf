@@ -41,7 +41,7 @@
             <aces:transformId>IDT.Acme.Camera.a1.v1</aces:transformId>
         </aces:inputTransform>
         <aces:lookTransforms>
-            <aces:asc-cdl lookTransformStackPosition="0" applied="true">
+            <aces:asc-cdl applied="true">
                 <aces:description>Technical Grade</aces:description>
                 <aces:lookTransformWorkingSpace>
                     <aces:toLookTransformWorkingSpace>
@@ -60,7 +60,7 @@
                     <cdl:Saturation>1</cdl:Saturation>
                 </cdl:ASC_SAT>
             </aces:asc-cdl>
-            <aces:lookFile lookTransformStackPosition="1" applied="false">
+            <aces:lookFile applied="false">
                 <aces:description>Acme DI Show Look</aces:description>
                 <aces:hash algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</aces:hash>
                 <aces:lookTransformWorkingSpace>

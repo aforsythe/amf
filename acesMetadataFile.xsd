@@ -218,7 +218,6 @@
 				<xs:sequence>
 					<xs:element name="lookTransformWorkingSpace" type="aces:lookTransformWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
-				<xs:attribute name="lookTransformStackPosition" type="aces:singleDigitType" use="required"/>
 				<xs:attribute name="applied" type="xs:boolean" use="required"/>
 			</xs:extension>
 		</xs:complexContent>
@@ -286,12 +285,7 @@
 		<xs:sequence>
 			<xs:element name="pipelineInfo" type="aces:pipelineInfoType" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="inputTransform" type="aces:inputTransformType" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="lookTransforms" type="aces:lookTransformsType" minOccurs="0" maxOccurs="1">
-				<xs:unique name="uniqueLookTransformStackPosition">
-					<xs:selector xpath="aces:lookFile | aces:asc-cdl" />
-					<xs:field xpath="@lookTransformStackPosition" />
-				</xs:unique>
-			</xs:element>
+			<xs:element name="lookTransforms" type="aces:lookTransformsType" minOccurs="0" maxOccurs="1" />
 			<xs:element name="outputTransform" type="aces:outputTransformType" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
