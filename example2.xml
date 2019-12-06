@@ -7,6 +7,10 @@
     version="1.0">
     <aces:amfInfo>
         <aces:description>Oscar Winning Movie</aces:description>
+        <aces:author>
+            <aces:name>Foo Bar</aces:name>
+            <aces:emailAddress>Foobar@onset.com</aces:emailAddress>
+        </aces:author>
         <aces:dateTime>
             <aces:creationDateTime>2019-09-19T13:20:00</aces:creationDateTime>
             <aces:modificationDateTime>2019-11-27T13:20:00Z</aces:modificationDateTime>
