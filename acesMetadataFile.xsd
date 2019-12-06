@@ -206,7 +206,7 @@
 	</xs:complexType>
 
 	<xs:complexType name="lookTransformsType">
-		<xs:choice minOccurs="1" maxOccurs="5">
+		<xs:choice minOccurs="1" maxOccurs="unbounded">
 			<xs:element name="lookFile" type="aces:lookFileType"/>
 			<xs:element name="asc-cdl" type="aces:cdlType"/>
 		</xs:choice>
@@ -297,7 +297,7 @@
 				<xs:element name="amfInfo" type="aces:infoType" minOccurs="1" maxOccurs="1"/>
 				<xs:element name="clipId" type="aces:clipIdType" minOccurs="0" maxOccurs="1"/>
 				<xs:element name="pipeline" type="aces:pipelineType" minOccurs="1" maxOccurs="1"/>
-				<xs:element name="archivedPipeline" type="aces:pipelineType" minOccurs="0" maxOccurs="10"/>
+				<xs:element name="archivedPipeline" type="aces:pipelineType" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
 			<xs:attribute name="version" type="xs:decimal" use="required" fixed="1.0"/>
 		</xs:complexType>
