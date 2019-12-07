@@ -255,7 +255,7 @@
 		</xs:sequence>
 	</xs:complexType>
 	
-	<xs:complexType name="author">
+	<xs:complexType name="authorType">
 		<xs:sequence>
 			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="emailAddress" type="aces:emailAddressType" minOccurs="1" maxOccurs="1"/>
@@ -265,7 +265,7 @@
 	<xs:complexType name="infoType">
 		<xs:sequence>
 			<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="author" type="aces:author" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="author" type="aces:authorType" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="dateTime" type="aces:dateTimeType" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="uuid" type="dcml:UUIDType" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
