@@ -44,43 +44,41 @@
             <aces:hash algorithm="sha256">1531ea6ef06c5b0a5bea80c94f60c7b68e3989e3c90b8ebd25c28aa4670c30f8</aces:hash>
             <aces:transformId>IDT.Acme.Camera.a1.v1</aces:transformId>
         </aces:inputTransform>
-        <aces:lookTransforms>
-            <aces:asc-cdl applied="true">
-                <aces:description>Technical Grade</aces:description>
-                <aces:lookTransformWorkingSpace>
-                    <aces:toLookTransformWorkingSpace>
-                        <aces:transformId>ACEScsc.ACES_to_ACEScct.a1.0.3</aces:transformId>
-                    </aces:toLookTransformWorkingSpace>
-                    <aces:fromLookTransformWorkingSpace>
-                        <aces:transformId>ACEScsc.ACEScct_to_ACES.a1.0.3</aces:transformId>
-                    </aces:fromLookTransformWorkingSpace>
-                </aces:lookTransformWorkingSpace>
-                <cdl:SOPNode>
-                    <cdl:Slope>2.0 2.0 2.0</cdl:Slope>
-                    <cdl:Offset>0.1 0.1 0.1</cdl:Offset>
-                    <cdl:Power>1 1 1</cdl:Power>
-                </cdl:SOPNode>
-                <cdl:SatNode>
-                    <cdl:Saturation>1</cdl:Saturation>
-                </cdl:SatNode>
-            </aces:asc-cdl>
-            <aces:lookFile applied="false">
-                <aces:description>Acme DI Show Look</aces:description>
-                <aces:hash algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</aces:hash>
-                <aces:lookTransformWorkingSpace>
-                    <aces:toLookTransformWorkingSpace>
-                        <aces:description>Use ACEScc as the working space for this LMT</aces:description>
-                        <aces:hash algorithm="sha256">07eb8b020fe8fc10c8c4b983cc37798324c7eee1319f07dd0028fca96f904a7f</aces:hash>
-                        <aces:transformId>ACEScsc.ACES_to_ACEScc.a1.0.3</aces:transformId>
-                    </aces:toLookTransformWorkingSpace>
-                    <aces:fromLookTransformWorkingSpace>
-                        <aces:hash algorithm="sha256">ef461a45beded2c5204371f755ca2558e61743f288f3ccd719ce1de23ebcf9cb</aces:hash>
-                        <aces:transformId>ACEScsc.ACEScc_to_ACES.a1.0.3</aces:transformId>
-                    </aces:fromLookTransformWorkingSpace>
-                </aces:lookTransformWorkingSpace>
-                <aces:transformId>LMT.AcmeDI.a1.v5</aces:transformId>
-            </aces:lookFile>
-        </aces:lookTransforms>
+        <aces:lookTransform applied="true">
+            <aces:description>Technical Grade</aces:description>
+            <aces:lookTransformWorkingSpace>
+                <aces:toLookTransformWorkingSpace>
+                    <aces:transformId>ACEScsc.ACES_to_ACEScct.a1.0.3</aces:transformId>
+                </aces:toLookTransformWorkingSpace>
+                <aces:fromLookTransformWorkingSpace>
+                    <aces:transformId>ACEScsc.ACEScct_to_ACES.a1.0.3</aces:transformId>
+                </aces:fromLookTransformWorkingSpace>
+            </aces:lookTransformWorkingSpace>
+            <cdl:SOPNode>
+                <cdl:Slope>2.0 2.0 2.0</cdl:Slope>
+                <cdl:Offset>0.1 0.1 0.1</cdl:Offset>
+                <cdl:Power>1 1 1</cdl:Power>
+            </cdl:SOPNode>
+            <cdl:SatNode>
+                <cdl:Saturation>1</cdl:Saturation>
+            </cdl:SatNode>
+        </aces:lookTransform>
+        <aces:lookTransform applied="false">
+            <aces:description>Acme DI Show Look</aces:description>
+            <aces:hash algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</aces:hash>
+            <aces:lookTransformWorkingSpace>
+                <aces:toLookTransformWorkingSpace>
+                    <aces:description>Use ACEScc as the working space for this LMT</aces:description>
+                    <aces:hash algorithm="sha256">07eb8b020fe8fc10c8c4b983cc37798324c7eee1319f07dd0028fca96f904a7f</aces:hash>
+                    <aces:transformId>ACEScsc.ACES_to_ACEScc.a1.0.3</aces:transformId>
+                </aces:toLookTransformWorkingSpace>
+                <aces:fromLookTransformWorkingSpace>
+                    <aces:hash algorithm="sha256">ef461a45beded2c5204371f755ca2558e61743f288f3ccd719ce1de23ebcf9cb</aces:hash>
+                    <aces:transformId>ACEScsc.ACEScc_to_ACES.a1.0.3</aces:transformId>
+                </aces:fromLookTransformWorkingSpace>
+            </aces:lookTransformWorkingSpace>
+            <aces:transformId>LMT.AcmeDI.a1.v5</aces:transformId>
+        </aces:lookTransform>
         <aces:outputTransform>
             <aces:referenceRenderingTransform>
                 <aces:description>ACES v1.0.3 RRT</aces:description>
@@ -113,43 +111,41 @@
             <aces:hash algorithm="md5">1531ea6ef06c5b0a5bea80c94f60c7b68e3989e3c90b8ebd25c28aa4670c30f8</aces:hash>
             <aces:transformId>IDT.Acme.Camera.a1.v1</aces:transformId>
         </aces:inputTransform>
-        <aces:lookTransforms>
-            <aces:asc-cdl applied="false">
-                <aces:description>Technical Grade</aces:description>
-                <aces:lookTransformWorkingSpace>
-                    <aces:toLookTransformWorkingSpace>
-                        <aces:transformId>ACEScsc.ACES_to_ACEScct.a1.0.3</aces:transformId>
-                    </aces:toLookTransformWorkingSpace>
-                    <aces:fromLookTransformWorkingSpace>
-                        <aces:transformId>ACEScsc.ACEScct_to_ACES.a1.0.3</aces:transformId>
-                    </aces:fromLookTransformWorkingSpace>
-                </aces:lookTransformWorkingSpace>
-                <cdl:SOPNode>
-                    <cdl:Slope>1.5 1.5 1.5</cdl:Slope>
-                    <cdl:Offset>0.1 0.1 0.1</cdl:Offset>
-                    <cdl:Power>1 1 1</cdl:Power>
-                </cdl:SOPNode>
-                <cdl:SatNode>
-                    <cdl:Saturation>1</cdl:Saturation>
-                </cdl:SatNode>
-            </aces:asc-cdl>
-            <aces:lookFile applied="false">
-                <aces:description>Acme DI Show Look</aces:description>
-                <aces:hash algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</aces:hash>
-                <aces:lookTransformWorkingSpace>
-                    <aces:toLookTransformWorkingSpace>
-                        <aces:description>Use ACEScc as the working space for this LMT</aces:description>
-                        <aces:hash algorithm="sha256">07eb8b020fe8fc10c8c4b983cc37798324c7eee1319f07dd0028fca96f904a7f</aces:hash>
-                        <aces:transformId>ACEScsc.ACES_to_ACEScc.a1.0.3</aces:transformId>
-                    </aces:toLookTransformWorkingSpace>
-                    <aces:fromLookTransformWorkingSpace>
-                        <aces:hash algorithm="sha256">ef461a45beded2c5204371f755ca2558e61743f288f3ccd719ce1de23ebcf9cb</aces:hash>
-                        <aces:transformId>ACEScsc.ACEScc_to_ACES.a1.0.3</aces:transformId>
-                    </aces:fromLookTransformWorkingSpace>
-                </aces:lookTransformWorkingSpace>
-                <aces:transformId>LMT.AcmeDI.a1.v5</aces:transformId>
-            </aces:lookFile>
-        </aces:lookTransforms>
+        <aces:lookTransform applied="false">
+            <aces:description>Technical Grade</aces:description>
+            <aces:lookTransformWorkingSpace>
+                <aces:toLookTransformWorkingSpace>
+                    <aces:transformId>ACEScsc.ACES_to_ACEScct.a1.0.3</aces:transformId>
+                </aces:toLookTransformWorkingSpace>
+                <aces:fromLookTransformWorkingSpace>
+                    <aces:transformId>ACEScsc.ACEScct_to_ACES.a1.0.3</aces:transformId>
+                </aces:fromLookTransformWorkingSpace>
+            </aces:lookTransformWorkingSpace>
+            <cdl:SOPNode>
+                <cdl:Slope>1.5 1.5 1.5</cdl:Slope>
+                <cdl:Offset>0.1 0.1 0.1</cdl:Offset>
+                <cdl:Power>1 1 1</cdl:Power>
+            </cdl:SOPNode>
+            <cdl:SatNode>
+                <cdl:Saturation>1</cdl:Saturation>
+            </cdl:SatNode>
+        </aces:lookTransform>
+        <aces:lookTransform applied="false">
+            <aces:description>Acme DI Show Look</aces:description>
+            <aces:hash algorithm="sha256">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</aces:hash>
+            <aces:lookTransformWorkingSpace>
+                <aces:toLookTransformWorkingSpace>
+                    <aces:description>Use ACEScc as the working space for this LMT</aces:description>
+                    <aces:hash algorithm="sha256">07eb8b020fe8fc10c8c4b983cc37798324c7eee1319f07dd0028fca96f904a7f</aces:hash>
+                    <aces:transformId>ACEScsc.ACES_to_ACEScc.a1.0.3</aces:transformId>
+                </aces:toLookTransformWorkingSpace>
+                <aces:fromLookTransformWorkingSpace>
+                    <aces:hash algorithm="sha256">ef461a45beded2c5204371f755ca2558e61743f288f3ccd719ce1de23ebcf9cb</aces:hash>
+                    <aces:transformId>ACEScsc.ACEScc_to_ACES.a1.0.3</aces:transformId>
+                </aces:fromLookTransformWorkingSpace>
+            </aces:lookTransformWorkingSpace>
+            <aces:transformId>LMT.AcmeDI.a1.v5</aces:transformId>
+        </aces:lookTransform>
         <aces:outputTransform>
             <aces:description>Some HDR Output Transform</aces:description>
             <aces:hash algorithm="sha256">9ffcd28772e244f9a3c6e9893f499f2b4f2f3313d292db51aeea4fd3f65f00d9</aces:hash>

@@ -205,44 +205,23 @@
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:complexType name="lookTransformsType">
-		<xs:choice minOccurs="1" maxOccurs="unbounded">
-			<xs:element name="lookFile" type="aces:lookFileType"/>
-			<xs:element name="asc-cdl" type="aces:cdlType"/>
-		</xs:choice>
-	</xs:complexType>
-
 	<xs:complexType name="lookTransformType">
 		<xs:complexContent>
 			<xs:extension base="aces:transformType">
 				<xs:sequence>
 					<xs:element name="lookTransformWorkingSpace" type="aces:lookTransformWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
+					<xs:choice minOccurs="1" maxOccurs="1">
+						<xs:element name="transformId" type="aces:tnLookTransform" minOccurs="1" maxOccurs="1"/>
+						<xs:choice minOccurs="1" maxOccurs="1">
+							<xs:sequence>
+								<xs:element ref="cdl:SOPNode" minOccurs="1" maxOccurs="1"/>
+								<xs:element ref="cdl:SatNode" minOccurs="1" maxOccurs="1"/>
+							</xs:sequence>
+							<xs:element ref="cdl:ColorCorrectionRef"/>
+						</xs:choice>
+					</xs:choice>
 				</xs:sequence>
 				<xs:attribute name="applied" type="xs:boolean" use="required"/>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-
-	<xs:complexType name="cdlType">
-		<xs:complexContent>
-			<xs:extension base="aces:lookTransformType">
-				<xs:choice minOccurs="1" maxOccurs="1">
-					<xs:sequence>
-						<xs:element ref="cdl:SOPNode" minOccurs="1" maxOccurs="1"/>
-						<xs:element ref="cdl:SatNode" minOccurs="1" maxOccurs="1"/>
-					</xs:sequence>
-					<xs:element ref="cdl:ColorCorrectionRef"/>
-				</xs:choice>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-
-	<xs:complexType name="lookFileType">
-		<xs:complexContent>
-			<xs:extension base="aces:lookTransformType">
-				<xs:sequence>
-					<xs:element name="transformId" type="aces:tnLookTransform" minOccurs="1" maxOccurs="1"/>
-				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -285,7 +264,7 @@
 		<xs:sequence>
 			<xs:element name="pipelineInfo" type="aces:pipelineInfoType" minOccurs="1" maxOccurs="1"/>
 			<xs:element name="inputTransform" type="aces:inputTransformType" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="lookTransforms" type="aces:lookTransformsType" minOccurs="0" maxOccurs="1" />
+			<xs:element name="lookTransform" type="aces:lookTransformType" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element name="outputTransform" type="aces:outputTransformType" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
