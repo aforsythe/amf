@@ -79,27 +79,28 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
-	<xs:simpleType name="hashAlgoType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="sha256"/>
-			<xs:enumeration value="sha1"/>
-			<xs:enumeration value="md5"/>
-		</xs:restriction>
-	</xs:simpleType>
-	
 	<xs:simpleType name="emailAddressType"> 
 		<xs:restriction base="xs:string"> 
 			<xs:pattern value="[^@]+@[^\.]+\..+"/> 
 		</xs:restriction> 
 	</xs:simpleType>
-
+	
+	<xs:simpleType name="hashAlgoType">
+			<xs:restriction base="xs:anyURI">
+				<xs:enumeration value="http://www.w3.org/2001/04/xmlenc#sha256"/>
+				<xs:enumeration value="http://www.w3.org/2000/09/xmldsig#sha1"/>
+				<xs:enumeration value="http://www.w3.org/2001/04/xmldsig-more#md5"/>
+			</xs:restriction>
+	</xs:simpleType>
+	
 	<xs:complexType name="hashType">
 		<xs:simpleContent>
-			<xs:extension base="xs:string">
+			<xs:extension base="xs:base64Binary">
 				<xs:attribute name="algorithm" type="aces:hashAlgoType" use="required"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+
 	
 	<!-- Define clip identification types -->
 	<xs:complexType name="sequenceType">
