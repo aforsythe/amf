@@ -118,7 +118,7 @@
 			<xs:element name="clipName" type="xs:string" minOccurs="1" maxOccurs="1"/>
 			<xs:choice minOccurs="1" maxOccurs="1">
 				<xs:element name="sequence" type="aces:sequenceType"/>
-				<xs:element name="file" type="xs:string"/>
+				<xs:element name="file" type="xs:anyURI"/>
 				<xs:element name="uuid" type="dcml:UUIDType"/>
 			</xs:choice>
 		</xs:sequence>
