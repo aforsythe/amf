@@ -39,46 +39,40 @@
 	<!-- Define transform name types -->
 	<xs:simpleType name="tnLookTransform">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="(LMT\.\S+\.a\d{1}\.v\d+)|(LMT\.Academy\.\S+\.a\d{1}\.\d{1}\.\d{1})"/>
+			<xs:pattern value="LMT\.\S+\.a\d+\.v\d+|LMT\.Academy\.\S+\.a\d+\.\d+\.\d+"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="tnInputTransform">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="(IDT\.\S+\.a\S+\.v\S+)"/>
+			<xs:pattern value="IDT\.\S+\.a\d+\.v\d+"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="tnOutputDeviceTransform">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="(ODT\.\S+\.\S+\.a\d{1}\.v\d+)|(ODT\.Academy\.\S+\.a\d{1}\.\d{1}\.\d{1})"/>
+			<xs:pattern value="ODT\.\S+\.\S+\.a\d+\.v\d+|ODT\.Academy\.\S+\.a\d+\.\d+\.\d+"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="tnOutputTransform">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="(RRTODT\.\S+\.\S+\.a\d{1}\.v\d+)|(RRTODT\.Academy\.\S+\.a\d{1}\.\d{1}\.\d{1})"/>
+			<xs:pattern value="RRTODT\.\S+\.\S+\.a\d+\.v\d+"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="tnReferenceRenderingTransform">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="(RRT\.a\d{1}\.\d\.\d+)"/>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="tnToLookTransformWorkingSpace">
-		<xs:restriction base="xs:string">
-			<xs:pattern value="(ACEScsc\.\S+\.a\d{1}\.\d{1}\.\d{1})"/>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="tnFromLookTransformWorkingSpace">
-		<xs:restriction base="xs:string">
-			<xs:pattern value="(ACEScsc\.\S+\.a\S+\.\S+\.\S+)"/>
+			<xs:pattern value="RRT\.a\d+(\.\d+\.\d+)?"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
+	<xs:simpleType name="tnColorSpaceConversionTransform">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="ACEScsc\.\S+\.a\d+\.v\d+|ACEScsc\.Academy\.a\d+\.\d+\.\d+"/>
+		</xs:restriction>
+	</xs:simpleType>
+
 	<xs:simpleType name="emailAddressType"> 
 		<xs:restriction base="xs:string"> 
 			<xs:pattern value="[^@]+@[^\.]+\..+"/> 
@@ -183,7 +177,7 @@
 		<xs:complexContent>
 			<xs:extension base="aces:transformType">
 				<xs:sequence>
-					<xs:element name="transformId" type="aces:tnToLookTransformWorkingSpace" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="transformId" type="aces:tnColorSpaceConversionTransform" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -193,7 +187,7 @@
 		<xs:complexContent>
 			<xs:extension base="aces:transformType">
 				<xs:sequence>
-					<xs:element name="transformId" type="aces:tnFromLookTransformWorkingSpace" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="transformId" type="aces:tnColorSpaceConversionTransform" minOccurs="1" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
