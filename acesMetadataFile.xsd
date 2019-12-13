@@ -28,7 +28,7 @@
 			<xs:maxInclusive value="9"/>
 		</xs:restriction>
 	</xs:simpleType>
-
+	
 	<xs:complexType name="dateTimeType">
 		<xs:sequence>
 			<xs:element name="creationDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
@@ -57,13 +57,13 @@
 
 	<xs:simpleType name="tnOutputTransform">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="RRTODT\.\S+\.\S+\.a\d+\.v\d+"/>
+			<xs:pattern value="RRTODT\.\S+\.\S+\.a\d+\.v\d+|RRTODT\.Academy\.\S+\.a\d+\.\d+\.\d+"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="tnReferenceRenderingTransform">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="RRT\.a\d+(\.\d+\.\d+)?"/>
+			<xs:pattern value="RRT\.a\d+\.\d+\.\d+"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -72,7 +72,7 @@
 			<xs:pattern value="ACEScsc\.\S+\.a\d+\.v\d+|ACEScsc\.Academy\.a\d+\.\d+\.\d+"/>
 		</xs:restriction>
 	</xs:simpleType>
-
+	
 	<xs:simpleType name="emailAddressType"> 
 		<xs:restriction base="xs:string"> 
 			<xs:pattern value="[^@]+@[^\.]+\..+"/> 
