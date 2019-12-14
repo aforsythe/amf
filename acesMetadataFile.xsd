@@ -39,37 +39,37 @@
 	<!-- Define transform name types -->
 	<xs:simpleType name="tnLookTransform">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="LMT\.\S+\.a\d+\.v\d+|LMT\.Academy\.\S+\.a\d+\.\d+\.\d+"/>
+			<xs:pattern value="urn:ampas:aces:transformId:v1.5:(LMT\.\S+\.\S+\.a\d+\.v\d+|LMT\.Academy\.\S+\.a\d+\.\d+\.\d+)"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="tnInputTransform">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="IDT\.\S+\.a\d+\.v\d+"/>
+			<xs:pattern value="urn:ampas:aces:transformId:v1.5:IDT\.\S+\.\S+\.a\d+\.v\d+"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="tnOutputDeviceTransform">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="ODT\.\S+\.\S+\.a\d+\.v\d+|ODT\.Academy\.\S+\.a\d+\.\d+\.\d+"/>
+			<xs:pattern value="urn:ampas:aces:transformId:v1.5:(ODT\.\S+\.\S+\.a\d+\.v\d+|ODT\.Academy\.\S+\.a\d+\.\d+\.\d+)"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="tnOutputTransform">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="RRTODT\.\S+\.\S+\.a\d+\.v\d+|RRTODT\.Academy\.\S+\.a\d+\.\d+\.\d+"/>
+			<xs:pattern value="urn:ampas:aces:transformId:v1.5:(RRTODT\.\S+\.\S+\.a\d+\.v\d+|RRTODT\.Academy\.\S+\.a\d+\.\d+\.\d+)"/>
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="tnReferenceRenderingTransform">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="RRT\.a\d+\.\d+\.\d+"/>
+			<xs:pattern value="urn:ampas:aces:transformId:v1.5:RRT\.a\d+\.\d+\.\d+"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
 	<xs:simpleType name="tnColorSpaceConversionTransform">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="ACEScsc\.\S+\.a\d+\.v\d+|ACEScsc\.Academy\.a\d+\.\d+\.\d+"/>
+			<xs:pattern value="urn:ampas:aces:transformId:v1.5:(ACEScsc\.\S+\.\S+\.a\d+\.v\d+|ACEScsc\.Academy\.\S+\.a\d+\.\d+\.\d+)"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
