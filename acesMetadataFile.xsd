@@ -195,7 +195,7 @@
 
 	<xs:complexType name="lookTransformWorkingSpaceType">
 		<xs:sequence>
-			<xs:element name="toLookTransformWorkingSpace" type="aces:toLookTransformWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="toLookTransformWorkingSpace" type="aces:toLookTransformWorkingSpaceType" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="fromLookTransformWorkingSpace" type="aces:fromLookTransformWorkingSpaceType" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>

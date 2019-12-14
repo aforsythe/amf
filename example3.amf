@@ -47,9 +47,6 @@
         <aces:lookTransform applied="true">
             <aces:description>Technical Grade</aces:description>
             <aces:lookTransformWorkingSpace>
-                <aces:toLookTransformWorkingSpace>
-                    <aces:transformId>urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACES_to_ACEScct.a1.0.3</aces:transformId>
-                </aces:toLookTransformWorkingSpace>
                 <aces:fromLookTransformWorkingSpace>
                     <aces:transformId>urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACEScct_to_ACES.a1.0.3</aces:transformId>
                 </aces:fromLookTransformWorkingSpace>
@@ -70,14 +67,14 @@
                 <aces:toLookTransformWorkingSpace>
                     <aces:description>Use ACEScc as the working space for this LMT</aces:description>
                     <aces:hash algorithm="http://www.w3.org/2001/04/xmlenc#sha256">07eb8b020fe8fc10c8c4b983cc37798324c7eee1319f07dd0028fca96f904a7f</aces:hash>
-                    <aces:transformId>urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACES_to_ACEScc.a1.0.3</aces:transformId>
+                    <aces:transformId>urn:ampas:aces:transformId:v1.5:ACEScsc.ACME.ACES_to_MyCustomLogSpace.a1.v1</aces:transformId>
                 </aces:toLookTransformWorkingSpace>
                 <aces:fromLookTransformWorkingSpace>
                     <aces:hash algorithm="http://www.w3.org/2001/04/xmlenc#sha256">ef461a45beded2c5204371f755ca2558e61743f288f3ccd719ce1de23ebcf9cb</aces:hash>
-                    <aces:transformId>urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACEScc_to_ACES.a1.0.3</aces:transformId>
+                    <aces:transformId>urn:ampas:aces:transformId:v1.5:ACEScsc.ACME.MyCustomLogSpace_to_ACES.a1.v1</aces:transformId>
                 </aces:fromLookTransformWorkingSpace>
             </aces:lookTransformWorkingSpace>
-            <aces:transformId>urn:ampas:aces:transformId:v1.5:LMT.Academy.AcmeDI.a1.v5</aces:transformId>
+            <aces:transformId>urn:ampas:aces:transformId:v1.5:LMT.ACME.AcmeDILook.a1.v5</aces:transformId>
         </aces:lookTransform>
         <aces:outputTransform>
             <aces:referenceRenderingTransform>
@@ -114,9 +111,6 @@
         <aces:lookTransform applied="false">
             <aces:description>Technical Grade</aces:description>
             <aces:lookTransformWorkingSpace>
-                <aces:toLookTransformWorkingSpace>
-                    <aces:transformId>urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACES_to_ACEScct.a1.0.3</aces:transformId>
-                </aces:toLookTransformWorkingSpace>
                 <aces:fromLookTransformWorkingSpace>
                     <aces:transformId>urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACEScct_to_ACES.a1.0.3</aces:transformId>
                 </aces:fromLookTransformWorkingSpace>
@@ -137,14 +131,14 @@
                 <aces:toLookTransformWorkingSpace>
                     <aces:description>Use ACEScc as the working space for this LMT</aces:description>
                     <aces:hash algorithm="http://www.w3.org/2001/04/xmlenc#sha256">07eb8b020fe8fc10c8c4b983cc37798324c7eee1319f07dd0028fca96f904a7f</aces:hash>
-                    <aces:transformId>urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACES_to_ACEScc.a1.0.3</aces:transformId>
+                    <aces:transformId>urn:ampas:aces:transformId:v1.5:ACEScsc.ACME.ACES_to_MyCustomLogSpace.a1.v1</aces:transformId>
                 </aces:toLookTransformWorkingSpace>
                 <aces:fromLookTransformWorkingSpace>
                     <aces:hash algorithm="http://www.w3.org/2001/04/xmlenc#sha256">ef461a45beded2c5204371f755ca2558e61743f288f3ccd719ce1de23ebcf9cb</aces:hash>
-                    <aces:transformId>urn:ampas:aces:transformId:v1.5:ACEScsc.Academy.ACEScc_to_ACES.a1.0.3</aces:transformId>
+                    <aces:transformId>urn:ampas:aces:transformId:v1.5:ACEScsc.ACME.MyCustomLogSpace_to_ACES.a1.v1</aces:transformId>
                 </aces:fromLookTransformWorkingSpace>
             </aces:lookTransformWorkingSpace>
-            <aces:transformId>urn:ampas:aces:transformId:v1.5:LMT.Academy.AcmeDI.a1.v5</aces:transformId>
+            <aces:transformId>urn:ampas:aces:transformId:v1.5:LMT.ACME.AcmeDILook.a1.v5</aces:transformId>
         </aces:lookTransform>
         <aces:outputTransform>
             <aces:description>Some HDR Output Transform</aces:description>
