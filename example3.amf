@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aces:acesMetadataFile 
-    xmlns:aces="urn:acesMetadata:acesMetadataFile:v1.0"
-    xsi:schemaLocation="urn:acesMetadata:acesMetadataFile:v1.0 file:acesMetadataFile.xsd"
+    xmlns:aces="urn:ampas:aces:amf:v1.0"
+    xsi:schemaLocation="urn:ampas:aces:amf:v1.0 file:acesMetadataFile.xsd"
     xmlns:cdl="urn:ASC:CDL:v1.01"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     version="1.0">

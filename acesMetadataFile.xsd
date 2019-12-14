@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="urn:acesMetadata:acesMetadataFile:v1.0"
-	xmlns:aces="urn:acesMetadata:acesMetadataFile:v1.0"
+<xs:schema targetNamespace="urn:ampas:aces:amf:v1.0"
+	xmlns:aces="urn:ampas:aces:amf:v1.0"
 	xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	xmlns:cdl="urn:ASC:CDL:v1.01" 
 	xmlns:dcml="http://www.smpte-ra.org/schemas/433/2008/dcmlTypes/"
